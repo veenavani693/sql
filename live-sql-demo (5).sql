@@ -1,0 +1,49 @@
+-- 1.Extract year from Order_Date.
+-- SELECT EXTRACT(YEAR FROM Order_Date) AS Year_Value FROM orders;
+-- 2. Extract month from Order_Date.
+-- SELECT EXTRACT(MONTH FROM Order_Date) AS Month_Value FROM orders;
+-- 3. Extract day from Order_Date.
+-- SELECT EXTRACT(DAY FROM Order_Date) AS Day_Value FROM orders;
+-- 4. Find current date.
+-- SELECT SYSDATE FROM ORDERS;
+-- 5. Find current timestamp.
+-- SELECT SYSTIMESTAMP FROM ORDERS;
+-- 6. Add 7 days to Order_Date.
+-- SELECT Order_Date + 7 AS New_Date FROM orders;
+-- 7. Subtract 30 days from Order_Date. 
+-- SELECT Order_Date - 30 AS Previous_Date FROM orders;
+-- 8. Find difference between two dates.
+-- SELECT SYSDATE - Order_Date AS Date_Difference FROM orders;
+-- 9. Find number of months between two dates.
+-- SELECT MONTHS_BETWEEN(SYSDATE, Order_Date) AS Months_Diff FROM orders;
+-- 10. Find last day of the month.
+-- SELECT LAST_DAY(Order_Date) AS Month_End FROM orders;
+-- 11. Get first day of the year
+-- SELECT TRUNC(Order_Date, 'YEAR') AS First_Day FROM orders;
+-- 12. Format date as 'DD-MM-YYYY'.
+-- SELECT TO_CHAR(Order_Date, 'DD-MM-YYYY') AS Formatted_Date FROM orders;
+-- 13. Convert string to date.
+-- SELECT TO_DATE('24-02-2026', 'DD-MM-YYYY') AS Converted_Date
+-- FROM ORDERS;
+-- 14. Convert date to string.
+-- SELECT TO_CHAR(SYSDATE, 'DD-MM-YYYY') AS Date_String FROM ORDERS;
+-- 15. Find week number of the year.
+-- SELECT TO_CHAR(Order_Date, 'WW') AS Week_Number FROM ORDERS;
+-- 16. Find day name from date.
+-- SELECT TO_CHAR(Order_Date, 'DAY') AS Day_Name FROM orders;
+-- 17. Find quarter of the year
+-- SELECT TO_CHAR(Order_Date, 'Q') AS Quarter FROM orders;
+--  18. Calculate age from DOB.
+--  SELECT TRUNC(MONTHS_BETWEEN(SYSDATE, DOB)/12) AS Age
+-- FROM orders;
+-- 19. Check if date is weekend.
+-- SELECT 
+--   CASE 
+--     WHEN TO_CHAR(Order_Date, 'DY', 'NLS_DATE_LANGUAGE=ENGLISH') IN ('SAT','SUN')
+--     THEN 'Weekend'
+--     ELSE 'Weekday'
+--   END AS Day_Type
+-- FROM orders;
+-- 20. Find next Monday after a given date.
+-- SELECT NEXT_DAY(Order_Date, 'MONDAY') AS Next_Monday
+-- FROM orders;
