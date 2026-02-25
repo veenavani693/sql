@@ -1,0 +1,111 @@
+-- CREATE TABLE Orders ( Order_ID INT PRIMARY KEY,
+--  Order_Date DATE,
+-- Customer_ID VARCHAR(10),
+-- Customer_Name VARCHAR(100), 
+-- Product_Category VARCHAR(100), 
+-- Product_Name VARCHAR(150), 
+-- Quantity INT, 
+-- Unit_Price DECIMAL(10,2), 
+-- Payment_Mode VARCHAR(50), 
+-- Store_Location VARCHAR(100)
+--  ); 
+--  SELECT * FROM orders;
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1001, TO_DATE('2026-02-01','YYYY-MM-DD'), 'C001', 'Ravi Kumar', 'Electronics', 'Wireless Mouse', 2, 799, 'UPI', 'Bangalore');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1002, TO_DATE('2026-02-02','YYYY-MM-DD'), 'C002', 'Sneha Reddy', 'Grocery', 'Basmati Rice 5kg', 1, 650, 'Credit Card', 'Hyderabad');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1003, TO_DATE('2026-02-03','YYYY-MM-DD'), 'C003', 'Arjun Mehta', 'Fashion', 'Men''s T-Shirt', 3, 499, 'Cash', 'Chennai');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1004, TO_DATE('2026-02-04','YYYY-MM-DD'), 'C004', 'Priya Sharma', 'Electronics', 'Bluetooth Speaker', 1, 1499, 'Debit Card', 'Mumbai');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1005, TO_DATE('2026-02-05','YYYY-MM-DD'), 'C005', 'Kiran Rao', 'Home  Kitchen', 'Mixer Grinder', 1, 2499, 'UPI', 'Bangalore');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1006, TO_DATE('2026-02-06','YYYY-MM-DD'), 'C006', 'Neha Verma', 'Beauty', 'Face Cream', 4, 299, 'Credit Card', 'Delhi');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1007, TO_DATE('2026-02-07','YYYY-MM-DD'), 'C007', 'Rahul Das', 'Grocery', 'Cooking Oil 1L', 5, 180, 'Cash', 'Kolkata');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1008, TO_DATE('2026-02-08','YYYY-MM-DD'), 'C008', 'Anjali Nair', 'Fashion', 'Women''s Jeans', 2, 1199, 'UPI', 'Kochi');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1009, TO_DATE('2026-02-09','YYYY-MM-DD'), 'C009', 'Suresh Patel', 'Electronics', 'Smartphone', 1, 15999, 'Debit Card', 'Ahmedabad');
+
+-- INSERT INTO Orders
+-- (Order_ID, Order_Date, Customer_ID, Customer_Name, Product_Category, Product_Name, Quantity, Unit_Price, Payment_Mode, Store_Location)
+-- VALUES
+-- (1010, TO_DATE('2026-02-10','YYYY-MM-DD'), 'C010', 'Meena Iyer', 'Home  Kitchen', 'Pressure Cooker', 1, 1899, 'Credit Card', 'Pune');
+
+-- SELECT * FROM Orders;
+-- SELECT UPPER(Customer_Name) AS Customer_Name
+-- FROM orders;
+-- SELECT SUBSTR(Product_Name, 1, 5) AS First_5_Characters
+-- FROM orders;
+-- SELECT LENGTH(Customer_Name) AS Name_Length
+-- FROM orders;
+-- SELECT REPLACE(Product_Name, 'Rice', 'Premium Rice') AS Updated_Product_Name
+-- FROM orders;
+-- SELECT TRIM(Customer_Name) AS Cleaned_Name
+-- FROM orders;
+-- SELECT CONCAT(First_Name, Last_Name) AS Full_Name
+-- FROM orders;
+-- SELECT *
+-- FROM orders
+-- WHERE Customer_Name LIKE 'A%';
+-- SELECT SUBSTR(Email_ID, INSTR(Email_ID, '@') + 1) AS Domain_Name
+-- FROM orders;
+-- SELECT INSTR(Email_ID, '@') AS Position_Of_At
+-- FROM orders;
+-- SELECT REVERSE(Product_Name) 
+-- FROM orders;
+-- SELECT INITCAP(Product_Name) AS Proper_Product_Name
+-- FROM orders;
+-- SELECT SUBSTR(Order_ID, -3) AS Last_3_Chars
+-- FROM orders;
+-- SELECT Customer_Name,
+--        LENGTH(Customer_Name) - LENGTH(REPLACE(LOWER(Customer_Name), 'a', '')) AS Count_Of_A
+-- FROM orders;
+-- SELECT SUBSTR(Phone_Number, 1, LENGTH(Phone_Number)-4) || 'XXXX' AS Masked_Number
+-- FROM orders;
+-- SELECT 
+--     SUBSTR(Full_Name, 1, INSTR(Full_Name, ' ') - 1) AS First_Name,
+--     SUBSTR(Full_Name, INSTR(Full_Name, ' ') + 1) AS Last_Name
+-- FROM orders;
+-- SELECT REGEXP_REPLACE(Product_Code, '[^A-Za-z0-9]', '') AS Clean_Code
+-- FROM orders;
+-- SELECT *
+-- FROM orders
+-- WHERE LOWER(Column1) = LOWER(Column2);
+-- SELECT *
+-- FROM orders
+-- WHERE LOWER(Customer_Name) LIKE '%kumar%';
+-- SELECT LPAD(Order_ID, 6, '0') AS Padded_Order_ID
+-- FROM orders;
+-- SELECT SUBSTR(Column_Name,
+--               INSTR(Column_Name, '(') + 1,
+--               INSTR(Column_Name, ')') - INSTR(Column_Name, '(') - 1) AS Extracted_Text
+-- FROM orders;
